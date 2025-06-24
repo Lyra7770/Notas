@@ -12,18 +12,32 @@
       padding: 0;
       overflow: hidden;
       background: #fffaf0;
+      font-family: 'Handlee', cursive;
     }
     canvas {
       display: block;
     }
-    #inputTexto {
+    #diarioInput {
       position: absolute;
-      left: -9999px; /* Oculto fuera de pantalla */
+      top: 60px;
+      left: 60px;
+      width: calc(100vw - 120px);
+      height: calc(100vh - 120px);
+      font-size: 24px;
+      line-height: 1.6;
+      background: transparent;
+      color: rgba(50, 50, 50, 0.9);
+      border: none;
+      resize: none;
+      outline: none;
+      font-family: 'Handlee', cursive;
+      z-index: 10;
+      display: none; /* Oculto por defecto */
     }
   </style>
 </head>
 <body>
-  <input type="text" id="inputTexto" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <textarea id="diarioInput" placeholder="Haz clic para comenzar a escribir..."></textarea>
   <script src="sketch.js"></script>
 </body>
 </html>
